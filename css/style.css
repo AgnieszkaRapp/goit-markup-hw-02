@@ -1,13 +1,22 @@
+:root {
+  --color-logo: rgb(33, 150, 243);
+  --color-main: rgb(33, 33, 33);
+  --color-black: rgb(0, 0, 0);
+  --color-contact: rgb(117, 117, 117);
+  --color-white: rgb(255, 255, 255);
+  --color-bg-main: rgb(47, 48, 58);
+  --color-bg-section: rgb(245, 244, 250);
+}
+
 body {
-  color: #212121;
-  background-color: #e5e5e5;
-  font-family: "Roboto", sans-serif;
-  font-family: "Raleway", sans-serif;
+  color: var(--color-main);
+  background-color: var(--color-bg-section);
+  font-family: "Roboto", "Raleway" sans-serif;
 }
 
 /* header part (+logo-bottom) */
 .top-row {
-  background-color: #ffffff;
+  background-color: var(--color-white);
 }
 .logo,
 .logo-bottom {
@@ -15,14 +24,14 @@ body {
   font-style: Bold;
   font-size: 26px;
   line-height: 1.19;
-  color: #000000;
+  color: var(--color-black);
   text-decoration: none;
 }
 .logo-bottom {
-  color: #ffffff;
+  color: var(--color-white);
 }
 span {
-  color: #2196f3;
+  color: var(--color-logo);
 }
 .menu {
   font-style: Medium;
@@ -32,7 +41,7 @@ span {
 }
 .link {
   text-decoration: none;
-  color: #212121;
+  color: var(--color-main);
 }
 
 .top-contacts {
@@ -43,9 +52,11 @@ span {
   letter-spacing: 0.02em;
 }
 .link:hover,
+link:focus,
 .link-contact:hover,
-.link-location:hover {
-  color: #2196f3;
+.link-contact:focus .link-location:hover,
+.link-location:focus {
+  color: var(--color-logo);
 }
 .link-contact {
   font-style: normal;
@@ -54,13 +65,15 @@ span {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-  color: #757575;
+  color: var(--color-contact);
 }
 /* ------------------------------- */
 
 /* main part */
 .banner {
-  background-color: #2f303a;
+  background-color: var(--color-bg-main);
+}
+.banner h1 {
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
@@ -68,7 +81,7 @@ span {
   text-align: center;
   letter-spacing: 00.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--color-white);
 }
 .button {
   font-family: "Roboto";
@@ -80,15 +93,18 @@ span {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: #212121;
+  color: var(--color-main);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  background-color: #f5f4fa;
+  background-color: var(--color-logo);
+  color: var(--color-white);
 }
 .button:hover,
-.btn:hover {
-  background-color: #2196f3;
+.button:focus .btn:hover,
+.button:focus {
+  background-color: var(--color-logo);
   cursor: pointer;
+  background-color: var(--color-logo);
 }
 
 .assets-title {
@@ -101,7 +117,7 @@ span {
   font-style: regular;
   font-size: 14px;
   line-height: 1.71;
-  color: #757575;
+  color: var(--color-contact);
 }
 .activities {
   font-size: normal;
@@ -110,7 +126,7 @@ span {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--color-main);
 }
 .team {
   font-size: normal;
@@ -119,22 +135,25 @@ span {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--color-main);
 }
 
+.filters {
+  font-family: "Roboto";
+}
 .person-name {
   font-size: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  color: #212121;
+  color: var(--color-main);
 }
 .person-position {
   font-size: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
-  color: #757575;
+  color: var(--color-contact);
 }
 
 .picture-title {
@@ -143,7 +162,7 @@ span {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: #212121;
+  color: var(--color-main);
 }
 
 .picture-caption {
@@ -152,14 +171,14 @@ span {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--color-contact);
 }
 
 /* ------------------------------- */
 /* footer part*/
 
 .bottom-row {
-  background-color: #2f303a;
+  background-color: var(--color-bg-main);
 }
 
 .location {
@@ -168,13 +187,14 @@ span {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--color-white);
 }
 .link-location {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
+  text-decoration: none;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
