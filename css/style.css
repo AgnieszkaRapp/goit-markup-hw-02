@@ -11,7 +11,7 @@
 body {
   color: var(--color-main);
   background-color: var(--color-bg-section);
-  font-family: "Roboto", "Raleway" sans-serif;
+  font-family: "Roboto", "Raleway", sans-serif;
 }
 
 /* header part (+logo-bottom) */
@@ -30,7 +30,7 @@ body {
 .logo-bottom {
   color: var(--color-white);
 }
-span {
+span.web {
   color: var(--color-logo);
 }
 .menu {
@@ -51,13 +51,17 @@ span {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
 .link:hover,
-link:focus,
-.link-contact:hover,
-.link-contact:focus .link-location:hover,
+.link:focus {
+  color: var(--color-logo);
+}
+
+.link-location:hover,
 .link-location:focus {
   color: var(--color-logo);
 }
+
 .link-contact {
   font-style: normal;
   font-weight: 500;
@@ -67,6 +71,12 @@ link:focus,
   text-decoration: none;
   color: var(--color-contact);
 }
+
+.link-contact:hover,
+.link-contact:focus {
+  color: var(--color-logo);
+}
+
 /* ------------------------------- */
 
 /* main part */
@@ -100,13 +110,13 @@ link:focus,
   color: var(--color-white);
 }
 .button:hover,
-.button:focus .btn:hover,
-.btn:focus {
+.button:focus {
   background-color: var(--color-logo);
   cursor: pointer;
   background-color: var(--color-logo);
 }
 .btn {
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -116,6 +126,13 @@ link:focus,
   color: var(--color-main);
   border-radius: 4px;
 }
+.btn:hover,
+.btn:focus {
+  background: var(--color-logo);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
 .assets-title {
   font-style: bold;
   font-size: 14px;
